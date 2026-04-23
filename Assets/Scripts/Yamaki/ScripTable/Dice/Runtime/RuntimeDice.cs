@@ -124,6 +124,11 @@ public class RuntimeDice
             Debug.LogWarning("[RuntimeDice] AddEntry: action が null です。");
             return false;
         }
+        if (string.IsNullOrEmpty(action.PersistentId))
+        {
+            Debug.LogWarning($"[RuntimeDice] AddEntry: action '{action.name}' に PersistentId がありません。" +
+                             "セーブ後にロードできなくなる可能性があります。");
+        }
 
         m_faces[faceIndex].AddEntry(new RuntimeActionEntry(action.PersistentId, target, value));
         return true;

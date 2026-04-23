@@ -238,6 +238,12 @@ public class RunManager : MonoBehaviour
     public string GetSavePath()
     {
         string fileName = string.IsNullOrEmpty(m_saveFileName) ? "dicegame_run.json" : m_saveFileName;
+        // パストラバーサル対策: ディレクトリ区切り等を含まないファイル名のみを許容する
+        fileName = Path.GetFileName(fileName);
+        if (string.IsNullOrEmpty(fileName))
+        {
+            fileName = "dicegame_run.json";
+        }
         return Path.Combine(Application.persistentDataPath, fileName);
     }
 }

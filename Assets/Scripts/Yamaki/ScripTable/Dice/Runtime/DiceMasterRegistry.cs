@@ -115,6 +115,11 @@ public class DiceMasterRegistry : ScriptableObject
                 Debug.LogWarning($"[DiceMasterRegistry] DiceDefinition '{def.name}' に PersistentId がありません。スキップします。");
                 continue;
             }
+            if (m_definitionById.TryGetValue(id, out DiceDefinition existing) && existing != def)
+            {
+                Debug.LogError($"[DiceMasterRegistry] DiceDefinition の PersistentId が重複しています: " +
+                               $"'{existing.name}' と '{def.name}' (id={id})。後者を採用します。");
+            }
             m_definitionById[id] = def;
         }
 
@@ -128,6 +133,11 @@ public class DiceMasterRegistry : ScriptableObject
                 Debug.LogWarning($"[DiceMasterRegistry] DiceFace '{face.name}' に PersistentId がありません。スキップします。");
                 continue;
             }
+            if (m_faceById.TryGetValue(id, out DiceFace existingFace) && existingFace != face)
+            {
+                Debug.LogError($"[DiceMasterRegistry] DiceFace の PersistentId が重複しています: " +
+                               $"'{existingFace.name}' と '{face.name}' (id={id})。後者を採用します。");
+            }
             m_faceById[id] = face;
         }
 
@@ -140,6 +150,11 @@ public class DiceMasterRegistry : ScriptableObject
             {
                 Debug.LogWarning($"[DiceMasterRegistry] DiceAction '{action.name}' に PersistentId がありません。スキップします。");
                 continue;
+            }
+            if (m_actionById.TryGetValue(id, out DiceAction existingAction) && existingAction != action)
+            {
+                Debug.LogError($"[DiceMasterRegistry] DiceAction の PersistentId が重複しています: " +
+                               $"'{existingAction.name}' と '{action.name}' (id={id})。後者を採用します。");
             }
             m_actionById[id] = action;
         }
