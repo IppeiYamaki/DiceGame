@@ -9,7 +9,7 @@ using UnityEngine;
 ///   Create > DiceGame > DiceFace
 /// </summary>
 [CreateAssetMenu(fileName = "DiceFace_", menuName = "DiceGame/DiceFace")]
-public class DiceFace : ScriptableObject
+public class DiceFace : PersistentScriptableObject
 {
     // ─── 面の名前（省略可） ───────────────────────────────
 
