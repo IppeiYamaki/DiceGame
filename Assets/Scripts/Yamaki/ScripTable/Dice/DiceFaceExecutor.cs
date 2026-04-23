@@ -1,11 +1,11 @@
 using UnityEngine;
 
 /// <summary>
-/// DiceFace の効果リストを順番に実行するユーティリティクラス。
+/// DiceFace の効果リストを順番に実行するユーティリティクラス <br />
 /// DiceAction.Execute の第3引数（diceValue）には、各 ActionEntry に設定された
-/// 基本値（Value）をそのまま渡します。
+/// 基本値（Value）をそのまま渡します <br />
 /// バフ等による最終値計算が必要な場合は、呼び出し元で value を加工してから
-/// 別途 Execute を呼んでください。
+/// 別途 Execute を呼んでください
 /// </summary>
 public static class DiceFaceExecutor
 {

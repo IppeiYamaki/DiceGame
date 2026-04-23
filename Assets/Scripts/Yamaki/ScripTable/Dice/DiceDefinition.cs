@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ダイス本体を表す ScriptableObject。
-/// 複数の DiceFace を持ち、6 面に限らず n 面ダイスに対応します。
+/// ダイス本体を表す ScriptableObject
+/// 複数の DiceFace を持ち、6 面に限らず n 面ダイスに対応します <br />
 ///
 /// 作成方法: Project ビュー右クリック →
 ///   Create > DiceGame > DiceDefinition
@@ -22,7 +22,7 @@ public class DiceDefinition : ScriptableObject
 
     [SerializeField]
     [Header("面リスト")]
-    [Tooltip("ダイスの各面に対応する DiceFace アセット。\n" +
+    [Tooltip("ダイスの各面に対応する DiceFace アセット\n" +
              "要素数がそのままダイスの面数になります（6 面に限りません）。")]
     private List<DiceFace> m_faces = new List<DiceFace>();
 

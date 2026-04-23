@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ダイスの "1 面分の効果" を表す ScriptableObject。
-/// Inspector から複数の ActionEntry（アクション・対象・基本値）を設定できます。
+/// ダイスの "1 面分の効果" を表す ScriptableObject <br />
+/// Inspector から複数の ActionEntry（アクション・対象・基本値）を設定できます <br />
 ///
 /// 作成方法: Project ビュー右クリック →
 ///   Create > DiceGame > DiceFace

@@ -1,5 +1,5 @@
 /// <summary>
-/// ダイス効果の対象を表す列挙型。
+/// ダイス効果の対象を表す列挙型 <br />
 /// Self = 使用者自身, Enemy = 敵対対象
 /// </summary>
 public enum DiceFaceTarget

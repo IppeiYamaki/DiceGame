@@ -19,7 +19,7 @@ public class ActionEntry
 
     [SerializeField]
     [Header("対象")]
-    [Tooltip("効果を適用する対象。Self=使用者, Enemy=敵")]
+    [Tooltip("効果を適用する対象\nSelf=使用者, Enemy=敵")]
     private DiceFaceTarget m_target = DiceFaceTarget.Enemy;
 
     // ─── 基本値 ───────────────────────────────────────────
@@ -38,10 +38,10 @@ public class ActionEntry
     public DiceFaceTarget Target => m_target;
 
     /// <summary>
-    /// DiceAction.Execute に渡す基本値。
+    /// DiceAction.Execute に渡す基本値<br />
     /// ※ Execute の引数名は diceValue ですが、ここでは "出目の値" ではなく
-    ///   "プランナーが設定した基本値" として扱います。
-    ///   バフ等による最終値の計算は呼び出し側で行ってください。
+    ///   "プランナーが設定した基本値" として扱います <br />
+    ///   バフ等による最終値の計算は呼び出し側で行ってください
     /// </summary>
     public int Value => m_value;
 }
