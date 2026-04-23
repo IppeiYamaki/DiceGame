@@ -15,15 +15,15 @@ public class DiceFace : ScriptableObject
 
     [SerializeField]
     [Header("面の名前（省略可）")]
-    [Tooltip("Inspector や デバッグ用の識別名。例: 「攻撃×3」など")]
+    [Tooltip("Inspector や デバッグ用の識別名\n例: 「攻撃×3」など")]
     private string m_faceName = "";
 
     // ─── 効果リスト ────────────────────────────────────────
 
     [SerializeField]
     [Header("効果リスト")]
-    [Tooltip("この面が出たときに上から順に実行されるアクション一覧。\n" +
-             "同じ ActionEntry を複数追加すると、その回数だけ効果が発動します。")]
+    [Tooltip("この面が出たときに上から順に実行されるアクション一覧\n" +
+             "同じ ActionEntry を複数追加すると、その回数だけ効果が発動します")]
     private List<ActionEntry> m_actions = new List<ActionEntry>();
 
     // ─── 読み取り専用プロパティ ───────────────────────────

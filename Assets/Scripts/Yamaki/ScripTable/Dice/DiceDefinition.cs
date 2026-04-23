@@ -15,7 +15,7 @@ public class DiceDefinition : ScriptableObject
 
     [SerializeField]
     [Header("ダイス名")]
-    [Tooltip("このダイスの識別名。例: 「スターターダイス」")]
+    [Tooltip("このダイスの識別名\n例: 「スターターダイス」")]
     private string m_diceName = "";
 
     // ─── 面リスト ──────────────────────────────────────────
@@ -23,7 +23,7 @@ public class DiceDefinition : ScriptableObject
     [SerializeField]
     [Header("面リスト")]
     [Tooltip("ダイスの各面に対応する DiceFace アセット\n" +
-             "要素数がそのままダイスの面数になります（6 面に限りません）。")]
+             "要素数がそのままダイスの面数になります（6 面に限りません）")]
     private List<DiceFace> m_faces = new List<DiceFace>();
 
     // ─── 読み取り専用プロパティ ───────────────────────────
