@@ -9,7 +9,7 @@ using UnityEngine;
 ///   Create > DiceGame > DiceDefinition
 /// </summary>
 [CreateAssetMenu(fileName = "DiceDefinition_", menuName = "DiceGame/DiceDefinition")]
-public class DiceDefinition : PersistentScriptableObject
+public class DiceDefinition : ScriptableObject
 {
     // ─── ダイス名 ──────────────────────────────────────────
 
